@@ -2,7 +2,8 @@ const Sequelize = require('sequelize');
 
 const connection = new Sequelize('guiapress', 'root', '@Python123', {
     host: 'localhost',
-    dialect: "mysql"
+    dialect: "mysql",
+
 })
 
 module.exports = connection

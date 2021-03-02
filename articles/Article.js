@@ -26,4 +26,6 @@ Category.hasMany(Article) // Relacionamento: uma categoria tem vários artigos
 Article.belongsTo(Category) // Relacionamento: um artigo percente a uma categoria
 
 
+Article.sync({force: false}).then(() => {console.log("Tabela articles criada")})
+
 module.exports = Article;

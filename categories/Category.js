@@ -8,12 +8,11 @@ const Category = connection.define('categories', {
         type: Sequelize.STRING,
         allowNull: false
     },
-
-
     slug: {
         type: Sequelize.STRING,
         allowNull: false
     }
 })
 
+Category.sync({force: false}).then(() => { console.log("Tabela categories criada")})
 module.exports = Category
